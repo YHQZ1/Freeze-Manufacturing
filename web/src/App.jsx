@@ -27,7 +27,7 @@ const PRODUCTS = [
     specs: [
       { label: "Base", value: "Ethylene Glycol" },
       { label: "Technology", value: "OAT" },
-      { label: "Mix Ratio", value: "1:1 with water" },
+      { label: "Mix Ratio", value: "1:5 with water" },
       { label: "Protection", value: "Up to −35 °C / +120 °C" },
       { label: "Service Life", value: "Up to 5 years" },
       { label: "Pack Size", value: "1 L" },
@@ -52,7 +52,7 @@ const PRODUCTS = [
     specs: [
       { label: "Base", value: "Ethylene Glycol" },
       { label: "Technology", value: "HOAT" },
-      { label: "Mix Ratio", value: "1:1 with water" },
+      { label: "Mix Ratio", value: "1:5 with water" },
       { label: "Protection", value: "Up to −35 °C / +125 °C" },
       { label: "Service Life", value: "Up to 5 years" },
       { label: "Pack Size", value: "1 L" },
@@ -77,7 +77,7 @@ const PRODUCTS = [
     specs: [
       { label: "Base", value: "Ethylene Glycol" },
       { label: "Technology", value: "IAT" },
-      { label: "Mix Ratio", value: "1:1 with water" },
+      { label: "Mix Ratio", value: "1:5 with water" },
       { label: "Protection", value: "Up to −35 °C / +118 °C" },
       { label: "Service Life", value: "Up to 2 years" },
       { label: "Pack Size", value: "1 L" },
