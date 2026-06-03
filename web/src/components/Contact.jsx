@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Phone, MapPin, Factory, Check } from "lucide-react";
+import { Phone, MapPin, Factory, Check, Mail } from "lucide-react";
 import { SectionLabel } from "../App";
 
 export default function Contact() {
@@ -79,9 +79,18 @@ export default function Contact() {
                   value: "Hyderabad, India",
                 },
                 {
-                  icon: <Factory className="w-6 h-6 text-zinc-900" />,
-                  label: "Industry",
-                  value: "Coolant Manufacturing",
+                  icon: <Mail className="w-6 h-6 text-zinc-900" />,
+                  label: "Email",
+                  value: (
+                    <a
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=info@freeze.net.in"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      info@freeze.net.in
+                    </a>
+                  ),
                 },
               ].map((c) => (
                 <div key={c.label} className="flex gap-4 items-start">

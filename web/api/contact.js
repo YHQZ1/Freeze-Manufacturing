@@ -20,7 +20,7 @@ export default async function handler(req, res) {
     }
 
     await resend.emails.send({
-      from: "contact@freeze.net.in",
+      from: "Freeze Coolants <info@freeze.net.in>",
       to: "info@freeze.net.in",
       replyTo: email,
       subject: `New inquiry from ${name}`,
