@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Phone, MapPin, Factory, Check, Mail } from "lucide-react";
+import { Phone, MapPin, Check, Mail } from "lucide-react";
 import { SectionLabel } from "../App";
 
 export default function Contact() {
@@ -52,13 +52,13 @@ export default function Contact() {
             <SectionLabel>Contact</SectionLabel>
 
             <h2 className="text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight leading-[1.1] mb-6">
-              Let's talk <br /> cooling solutions.
+              Let's talk <br /> fluid requirements.
             </h2>
 
             <p className="text-lg text-zinc-600 leading-relaxed mb-12 max-w-md">
               Whether you need bulk supply, distribution inquiries, or technical
-              guidance on the right coolant for your application — our team is
-              ready to help.
+              guidance on the right oil, coolant, gear fluid, or ATF — our team
+              is ready to help.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-8">
@@ -66,7 +66,7 @@ export default function Contact() {
                 {
                   icon: <Phone className="w-6 h-6 text-zinc-900" />,
                   label: "Primary Phone",
-                  value: "+91 97376 00900",
+                  value: "+91 98490 21477",
                 },
                 {
                   icon: <Phone className="w-6 h-6 text-zinc-900" />,
@@ -211,6 +211,20 @@ export default function Contact() {
                     className="w-full px-4 py-3 bg-white border border-zinc-300 focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 outline-none text-sm text-zinc-900 cursor-pointer"
                   >
                     <option value="">Select a product</option>
+                    <option value="eco-4t">ECO 4T 20W40</option>
+                    <option value="semi-4t">Semi Synth 4T 20W40</option>
+                    <option value="semi-5w30">Semi Synth 5W30</option>
+                    <option value="synth-5w30">Synth 5W30</option>
+                    <option value="20w40-cf4">20W40 Diesel Oil (CF-4)</option>
+                    <option value="turbo-15w40">
+                      Turbo 15W40 Diesel Oil (CH-4)
+                    </option>
+                    <option value="15w40-ci4">15W40 Diesel Oil (CI-4)</option>
+                    <option value="gear-90">Gear 90 (GL-4)</option>
+                    <option value="gear-140">Gear 140 (GL-4)</option>
+                    <option value="gear-ep-80w90">Gear EP 80W90 (GL-5)</option>
+                    <option value="gear-320">Gear 320 Industrial</option>
+                    <option value="atf-tq">ATF (TQ)</option>
                     <option value="green">Green Coolant (OAT)</option>
                     <option value="red">Red / Pink Coolant (HOAT)</option>
                     <option value="blue">Blue Coolant (IAT)</option>

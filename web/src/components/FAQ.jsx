@@ -4,20 +4,24 @@ import { SectionLabel } from "../App";
 
 const FAQS = [
   {
-    q: "Can I mix red, green and blue coolants?",
-    a: "No. Different coolant technologies use incompatible inhibitor chemistries. Mixing can cause inhibitor precipitation, reduce protection, and potentially clog the cooling system. Always flush thoroughly before switching types.",
+    q: "What products does Freeze Manufacturers supply?",
+    a: "The Freeze range includes engine oils, 4T bike oils, heavy-duty diesel oils, gear oils, automatic transmission fluid, and red, green, and blue radiator coolants.",
   },
   {
-    q: "What dilution ratio should I use?",
-    a: "All Freeze coolants are supplied as concentrate. A 50:50 mix with clean water is recommended for year-round protection. Use distilled or de-mineralised water where possible.",
+    q: "How do I choose the right grade?",
+    a: "Match the product to the vehicle manufacturer's recommended viscosity, API or GL rating, coolant technology, and application. Share the vehicle or fleet details with our team if you need help selecting the right option.",
   },
   {
-    q: "How often should I change coolant?",
-    a: "OAT (Green) and HOAT (Red) formulas last up to 5 years or 200,000 km. IAT (Blue) should be replaced every 2 years or 50,000 km. Always check the reservoir level every 6 months.",
+    q: "Do you supply bulk packs for workshops and fleets?",
+    a: "Yes. Many oils and fluids are available in workshop and fleet-friendly pack sizes, including 20 L, 50 L, and 210 L options depending on the product.",
   },
   {
-    q: "Is it suitable for electric vehicles?",
-    a: "Yes. Our Green and Red coolants are compatible with EV battery-cooling circuits and electric motor cooling loops where Ethylene Glycol-based coolant is specified.",
+    q: "Can I mix different coolant colors or oil grades?",
+    a: "Avoid mixing different coolant technologies or lubricant grades unless the vehicle manufacturer allows it. For coolant changes, flush thoroughly before switching types. For oils and ATF, use the specified grade and rating.",
+  },
+  {
+    q: "Are the coolants still part of the range?",
+    a: "Yes. Coolants remain a core Freeze product line, now offered alongside engine oils, diesel oils, gear oils, bike oils, and ATF as part of the broader automotive fluids portfolio.",
   },
 ];
 
@@ -36,8 +40,8 @@ export default function FAQ() {
             Common questions.
           </h2>
           <p className="text-zinc-600">
-            Find quick answers to common queries regarding formulation, mixing,
-            and application.
+            Find quick answers about product selection, pack sizes, compatibility,
+            and applications across the complete Freeze range.
           </p>
         </div>
 

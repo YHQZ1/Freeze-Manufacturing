@@ -100,6 +100,14 @@ body {
   background: #333;
 }
 
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 input:focus,
 textarea:focus {
   outline: none;

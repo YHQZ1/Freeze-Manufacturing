@@ -29,7 +29,8 @@ export default function Nav() {
             className="h-8 w-auto object-contain"
           />
           <span className="text-zinc-900 font-bold text-xl tracking-tight">
-            Swati Chemicals<span className="font-normal text-zinc-500">.</span>
+            Freeze Manufacturers
+            <span className="font-normal text-zinc-500">.</span>
           </span>
         </a>
 

@@ -2,71 +2,57 @@ import React from "react";
 import { Thermometer, ShieldCheck, Droplets, Settings } from "lucide-react";
 import { SectionLabel } from "../App";
 
-const PRODUCTS = [
+const CATEGORY_MATRIX = [
   {
-    id: "green",
-    name: "Green Coolant",
-    colorText: "text-emerald-700",
-    specs: [
-      { value: "Ethylene Glycol" },
-      { value: "OAT" },
-      { value: "1:5 with water" },
-      { value: "Up to −35 °C / +120 °C" },
-      { value: "Up to 5 years" },
-      { value: "1 L" },
-    ],
-    type: "OAT — Organic Acid Technology",
-  },
-  {
-    id: "red",
-    name: "Red / Pink Coolant",
-    colorText: "text-red-700",
-    specs: [
-      { value: "Ethylene Glycol" },
-      { value: "HOAT" },
-      { value: "1:5 with water" },
-      { value: "Up to −35 °C / +125 °C" },
-      { value: "Up to 5 years" },
-      { value: "1 L" },
-    ],
-    type: "HOAT — Hybrid Organic Acid Technology",
-  },
-  {
-    id: "blue",
-    name: "Blue Coolant",
+    category: "Engine Oils",
+    grades: "5W30 · 20W40",
+    protection: "Cold starts, deposit control, fuel economy",
+    applications: "Passenger cars and light diesel vehicles",
     colorText: "text-blue-700",
-    specs: [
-      { value: "Ethylene Glycol" },
-      { value: "IAT" },
-      { value: "1:5 with water" },
-      { value: "Up to −35 °C / +118 °C" },
-      { value: "Up to 2 years" },
-      { value: "1 L" },
-    ],
-    type: "IAT — Inorganic Additive Technology",
+  },
+  {
+    category: "Diesel Oils",
+    grades: "CF-4 · CH-4 · CI-4",
+    protection: "Soot control, turbo protection, oxidation stability",
+    applications: "Trucks, buses, agriculture and construction equipment",
+    colorText: "text-orange-700",
+  },
+  {
+    category: "Gear Oils & ATF",
+    grades: "GL-4 · GL-5 · TQ",
+    protection: "Extreme pressure, anti-shudder and smooth shifting",
+    applications: "Gearboxes, differentials, axles and steering systems",
+    colorText: "text-slate-700",
+  },
+  {
+    category: "Coolants",
+    grades: "OAT · HOAT · IAT",
+    protection: "Heat transfer, corrosion control, boil and freeze guard",
+    applications: "Modern, older and heavy-duty cooling systems",
+    colorText: "text-emerald-700",
   },
 ];
 
 const BENEFITS = [
   {
     icon: <Thermometer className="w-7 h-7 text-zinc-900" />,
-    title: "Thermal Control",
-    desc: "Engineered to maintain optimal operating temperature from −35 °C to +125 °C across all seasons and driving conditions.",
+    title: "Temperature Stability",
+    desc: "Coolants manage heat transfer while multi-grade oils retain dependable flow across cold starts, traffic, highway loads, and long duty cycles.",
   },
   {
     icon: <ShieldCheck className="w-7 h-7 text-zinc-900" />,
-    title: "Corrosion Protection",
-    desc: "Inhibitor packages protect aluminium, cast iron, steel, copper, brass and rubber components inside the cooling circuit.",
+    title: "Component Protection",
+    desc: "Additive systems help protect engines, gears, transmissions, cooling circuits, seals, gaskets, and metal surfaces from wear and corrosion.",
   },
   {
     icon: <Droplets className="w-7 h-7 text-zinc-900" />,
-    title: "Boil & Freeze Guard",
-    desc: "Raises the boiling point and lowers the freezing point of the coolant mixture, preventing overheating and cracking.",
+    title: "Right Fluid, Right Grade",
+    desc: "The range covers mineral, semi-synthetic, full synthetic, diesel, gear, automatic transmission, and coolant requirements in practical pack sizes.",
   },
   {
     icon: <Settings className="w-7 h-7 text-zinc-900" />,
-    title: "Pump & Seal Safe",
-    desc: "Free from amines, borates, silicates and phosphates — safe for water-pump seals, gaskets and hoses.",
+    title: "Fleet Ready Supply",
+    desc: "From retail packs to 50 L and 210 L bulk options, the catalog is built for workshops, distributors, fleet operators, and industrial users.",
   },
 ];
 
@@ -76,7 +62,7 @@ export default function Benefits() {
       <div className="w-full px-6 lg:px-12 xl:px-16">
         <SectionLabel>Why Freeze</SectionLabel>
         <h2 className="text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight leading-[1.1] mb-12">
-          Built for performance. <br /> Designed to protect.
+          One portfolio. <br /> Protection across systems.
         </h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 xl:gap-12">
@@ -98,46 +84,39 @@ export default function Benefits() {
             <thead className="bg-zinc-50 border-b border-zinc-200">
               <tr>
                 <th className="px-6 py-5 text-xs font-bold text-zinc-500 uppercase tracking-widest whitespace-nowrap">
-                  Specification
+                  Category
                 </th>
-                {PRODUCTS.map((p) => (
-                  <th
-                    key={p.id}
-                    className={`px-6 py-5 font-bold ${p.colorText} whitespace-nowrap`}
-                  >
-                    {p.name}
-                  </th>
-                ))}
+                <th className="px-6 py-5 text-xs font-bold text-zinc-500 uppercase tracking-widest whitespace-nowrap">
+                  Grades / Technology
+                </th>
+                <th className="px-6 py-5 text-xs font-bold text-zinc-500 uppercase tracking-widest whitespace-nowrap">
+                  Primary Protection
+                </th>
+                <th className="px-6 py-5 text-xs font-bold text-zinc-500 uppercase tracking-widest whitespace-nowrap">
+                  Applications
+                </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-zinc-100">
-              {[
-                {
-                  label: "Technology",
-                  key: "type",
-                  transform: (v) => v.split(" — ")[0],
-                },
-                { label: "Mix Ratio", key: "specs", idx: 2 },
-                { label: "Protection Range", key: "specs", idx: 3 },
-                { label: "Service Life", key: "specs", idx: 4 },
-              ].map((row, ri) => (
+              {CATEGORY_MATRIX.map((row, ri) => (
                 <tr
-                  key={row.label}
+                  key={row.category}
                   className={ri % 2 === 0 ? "bg-white" : "bg-zinc-50/50"}
                 >
-                  <td className="px-6 py-4 font-semibold text-zinc-900 whitespace-nowrap">
-                    {row.label}
+                  <td
+                    className={`px-6 py-4 font-bold whitespace-nowrap ${row.colorText}`}
+                  >
+                    {row.category}
                   </td>
-                  {PRODUCTS.map((p) => (
-                    <td
-                      key={p.id}
-                      className="px-6 py-4 text-zinc-600 whitespace-nowrap"
-                    >
-                      {row.key === "type"
-                        ? row.transform(p.type)
-                        : p.specs[row.idx].value}
-                    </td>
-                  ))}
+                  <td className="px-6 py-4 text-zinc-600 whitespace-nowrap">
+                    {row.grades}
+                  </td>
+                  <td className="px-6 py-4 text-zinc-600 min-w-[280px]">
+                    {row.protection}
+                  </td>
+                  <td className="px-6 py-4 text-zinc-600 min-w-[320px]">
+                    {row.applications}
+                  </td>
                 </tr>
               ))}
             </tbody>
