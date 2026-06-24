@@ -11,7 +11,14 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const links = ["Products", "Technology", "Benefits", "FAQ", "Contact"];
+  const links = [
+    { label: "Products", href: "#products" },
+    { label: "Certifications", href: "#certifications" },
+    { label: "Technology", href: "#technology" },
+    { label: "Benefits", href: "#benefits" },
+    { label: "FAQ", href: "#faq" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   return (
     <nav
@@ -34,14 +41,14 @@ export default function Nav() {
           </span>
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {links.map((l) => (
             <a
-              key={l}
-              href={`#${l.toLowerCase()}`}
+              key={l.href}
+              href={l.href}
               className="text-sm font-medium text-zinc-600 hover:text-zinc-900 cursor-pointer"
             >
-              {l}
+              {l.label}
             </a>
           ))}
           <a
@@ -65,12 +72,12 @@ export default function Nav() {
         <div className="md:hidden bg-white border-t border-zinc-200 px-6 py-4 flex flex-col shadow-lg mt-2">
           {links.map((l) => (
             <a
-              key={l}
-              href={`#${l.toLowerCase()}`}
+              key={l.href}
+              href={l.href}
               onClick={() => setMenuOpen(false)}
               className="py-3 text-zinc-800 font-medium border-b border-zinc-100 last:border-0 cursor-pointer"
             >
-              {l}
+              {l.label}
             </a>
           ))}
         </div>

@@ -32,6 +32,14 @@ export default function Footer() {
               <ul className="space-y-3 text-sm text-zinc-400">
                 <li>
                   <a
+                    href="#certifications"
+                    className="hover:text-white cursor-pointer"
+                  >
+                    Certifications
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="#products"
                     className="hover:text-white cursor-pointer"
                   >

@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Products from "./components/Products";
+import Certifications from "./components/Certifications";
 import Technology from "./components/Technology";
 import Benefits from "./components/Benefits";
 import FAQ from "./components/FAQ";
@@ -26,6 +27,7 @@ export default function App() {
       <main>
         <Hero />
         <Products />
+        <Certifications />
         <Technology />
         <Benefits />
         <FAQ />
